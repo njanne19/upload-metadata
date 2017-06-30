@@ -1,5 +1,11 @@
 extends layout
 
 block content
-  h1 Welcome to Boostrap
-  button(class = "btn btn-primary") boomin
+  h1 Welcome to Janne's metadata API
+  h4 This API returns JSON data of a file's size.
+  
+  p To use this API, click the button below to choose a file, then click the "submit" button to get a response.
+  <form id ="uploadForm" enctype="multipart/form-data" action = "/api/file" method = "post">
+  input(type="file" name="userFile")
+  input(type="submit" value="Upload File" name="submit")
+  </form>
